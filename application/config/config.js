@@ -4,8 +4,7 @@
 const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');    // https://devhub.io/repos/ctavan-express-validator
-
+const expressValidator = require('express-validator');   
   
 //validator.isEmail('foo@bar.com'); //=> true
 
@@ -17,11 +16,10 @@ const app = express();
 app.set('port', process.env.PORT || 3003);
 
 
-
 /** implementação de [medular] */
 //app.use(express.json());
-app.use(bodyParser.json());                                // parse application/json, basically parse incoming Request Object as a JSON Object 
-app.use(bodyParser.urlencoded({entended: true}));          // tratamento encoded, para recuprar post get
+app.use(bodyParser.json());                                
+app.use(bodyParser.urlencoded({entended: true}));         
 app.use(expressValidator());
 
 

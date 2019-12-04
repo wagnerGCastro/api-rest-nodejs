@@ -6,12 +6,6 @@ module.exports = function() {
 }
 
 
-/**
- * Alterada a função de conexão devido estar desconectando: 
- * nodejs mysql Error: Connection lost The server closed the connection
- * solução: https://stackoverflow.com/questions/20210522/nodejs-mysql-error-connection-lost-the-server-closed-the-connection
- *
- */
 var db_config = {
     host     : '127.0.0.1',
     user     : 'root',
@@ -40,16 +34,6 @@ function handleDisconnect() {
 
  
 
-//handleDisconnect();
-
-/** Teste de conexão */
-
-// handleDisconnect().connect( function(err) {
-//   if(err) { 
-//       return console.log(err);
-//   } 
-//   console.log('conectou!');
-// })
 
 
 

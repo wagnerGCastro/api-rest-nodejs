@@ -16,7 +16,7 @@ var Users = /* @Class Model */ function() {
 
         this._conn.query(sql,  function (error, results, fields){
             if(error) { return console.log(error); }
-            if( Object.keys(results).length === 0 ) { console.log('Não teve reusltados') }
+            if( Object.keys(results).length === 0 ) { console.log('Não teve resultados') }
             //console.log(results)
             callback( results );
         });
@@ -31,7 +31,7 @@ var Users = /* @Class Model */ function() {
         this._conn.query(sql, data, function (error, results, fields){
             callback( error, results );
         });
-        //this._conn.end();//fecha a conexão
+        //this._conn.end();
     }
 
 
@@ -53,7 +53,7 @@ var Users = /* @Class Model */ function() {
         this._conn.query(sql, id, function (error, results, fields){
             callback( error, results);
         });
-        //this._conn.end();//fecha a conexão
+        //this._conn.end();
     }
 
 
@@ -64,7 +64,7 @@ var Users = /* @Class Model */ function() {
         this._conn.query(sql, id, function (error, results, fields){
             callback( error, results);
         });
-        //this._conn.end();//fecha a conexão
+        //this._conn.end();
     }
     
    

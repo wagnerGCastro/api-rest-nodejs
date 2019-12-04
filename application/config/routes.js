@@ -23,5 +23,5 @@ module.exports = function(app) {
         .delete( _ctrUsers.deleteUsers );
    
 
-} //end module.exports
+} 
 
